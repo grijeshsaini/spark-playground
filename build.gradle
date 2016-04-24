@@ -1,0 +1,24 @@
+group 'com.spark.playground'
+apply plugin: 'java'
+apply plugin: 'scala'
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.spark.playground.KmeansOnIris'
+    }
+    baseName = 'spark-playground'
+    version =  '1.0'
+}
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.scala-lang:scala-library:2.11.7')
+    compile('org.scala-lang:scala-compiler:2.11.7')
+    compile('org.apache.spark:spark-core_2.10:1.6.1')
+    compile('org.apache.spark:spark-mllib_2.10:1.6.1')
+    compile('org.scalanlp:breeze_2.10:0.10')
+    compile('com.github.wookietreiber:scala-chart_2.10:0.5.0')
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
