@@ -3,7 +3,6 @@ package com.spark.playground
 import org.apache.spark.mllib.clustering.{KMeansModel, KMeans}
 import org.apache.spark.mllib.linalg.Vectors
 import org.apache.spark.{SparkContext, SparkConf}
-import scalax.chart._
 
 /**
   * Created by grijesh on 24/4/16.

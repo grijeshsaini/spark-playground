@@ -9,6 +9,7 @@ object SparkWordCount extends App{
   val sparkConf = new SparkConf()
     .setAppName("com.spark.playground.SparkWordCount")
     .setMaster("local")
+    //.set("spark.driver.host", "127.0.0.1")
 
   val sc = new SparkContext(sparkConf)
 
