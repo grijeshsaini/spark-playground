@@ -32,7 +32,7 @@ object KmeansOnIris extends App{
 
   //clusters.save(sc, "/home/grijesh/irisOutput")
 
-  println(clusters.toPMML(System.out))
+  clusters.toPMML(System.out)
 
   val petalDetails = parsedData.map(arr => (clusters.predict(arr),arr.toArray.drop(2).toVector))
 
